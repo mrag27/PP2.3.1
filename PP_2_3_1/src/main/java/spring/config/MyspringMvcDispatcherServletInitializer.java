@@ -28,5 +28,6 @@ public class MyspringMvcDispatcherServletInitializer extends AbstractAnnotationC
     private void registerHiddenFieldFilter(ServletContext aContext) {
         aContext.addFilter("hiddenHttpMethodFilter",
                 new HiddenHttpMethodFilter()).addMappingForUrlPatterns(null, true, "/*");
+        aContext.setRequestCharacterEncoding("UTF-8");
     }
 }
